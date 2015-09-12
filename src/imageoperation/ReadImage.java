@@ -8,14 +8,14 @@ import java.util.Date;
 
 public class ReadImage {
 
-	public void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		//读镜像
 		//BufferedRead reader = new BufferedRead(); //以字符为单位读取，读镜像时会出错
-		MappedRead reader = new MappedRead(); //映射内存
-		//RandomRead reader = new RandomRead(); //随机读，以字节为单位
-		//RandomChannel reader = new RandomChannel(); //随机通道读，以字节为单位
-		//StreamRead reader = new StreamRead();  //输入流读，以字节为单位
+		//MappedRead reader = new MappedRead(); //映射内存，读Ubuntu时间5866，计算哈希时间18383
+		//RandomRead reader = new RandomRead(); //随机读，以字节为单位，读Ubuntu时间11478，计算哈希时间6629
+		//RandomChannel reader = new RandomChannel(); //随机通道读，以字节为单位，读Ubuntu时间1471
+		StreamRead reader = new StreamRead();  //输入流读，以字节为单位，读Ubuntu时间801，计算哈希时间6593
 		
 		//读取开始时间
 		Date date = new Date();
