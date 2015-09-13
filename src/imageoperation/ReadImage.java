@@ -6,9 +6,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
+import jxl.JXLException;
+import jxl.write.biff.JxlWriteException;
+
 public class ReadImage {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, JxlWriteException, JXLException {
 		// TODO Auto-generated method stub
 		//读镜像
 		//BufferedRead reader = new BufferedRead(); //以字符为单位读取，读镜像时会出错
@@ -23,7 +26,11 @@ public class ReadImage {
 		System.out.println(starttime);
 		
 		//读镜像
-		reader.readFile();
+		//reader.readFile();
+		
+		//比较相似度
+		CompareHash comHash = new CompareHash();
+		comHash.compareHashtable();
 		
 		//读取结束时间
 		Date date1 = new Date();

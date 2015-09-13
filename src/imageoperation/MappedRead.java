@@ -12,9 +12,9 @@ import java.nio.channels.FileChannel;
 public class MappedRead {
 	//Ó³ÉäÄÚ´æ
 	public void readFile () throws IOException{
-		FileChannel reader = new FileInputStream(Constant.PATH_IN_ISO).getChannel();
+		FileChannel reader = new FileInputStream(Constant.PATH_IN_ISO1).getChannel();
 		//FileChannel writer = new RandomAccessFile(Constant.PATH_OUT_ISO,"rw").getChannel();
-		File hashtable = new File(Constant.HASHTABLE);
+		File hashtable = new File(Constant.HASHTABLE1);
 		OutputStream writer = new FileOutputStream(hashtable);
 		GenerateHashtable generater = new GenerateHashtable();
 		

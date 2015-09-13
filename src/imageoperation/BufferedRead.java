@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 public class BufferedRead {
 	//以字符为单位读取，读镜像时会出错
 	public void readFile() throws IOException{
-		BufferedReader br = new BufferedReader(new FileReader(Constant.PATH_IN_ISO));
+		BufferedReader br = new BufferedReader(new FileReader(Constant.PATH_IN_ISO1));
 		//PrintWriter pw = new PrintWriter(Constant.PATH_OUT_ISO);
 		char[] c = new char[Constant.BUFFER_SIZE];
 		for(;;){

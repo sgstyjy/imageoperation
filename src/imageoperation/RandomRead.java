@@ -9,9 +9,9 @@ import java.io.RandomAccessFile;
 public class RandomRead {
 	//随机读，以字节为单位
 	public void readFile() throws IOException{
-		RandomAccessFile reader = new RandomAccessFile(Constant.PATH_IN_ISO,"r");
+		RandomAccessFile reader = new RandomAccessFile(Constant.PATH_IN_ISO1,"r");
 		//RandomAccessFile writer = new RandomAccessFile(Constant.PATH_OUT_ISO,"rw");
-		File hashtable = new File(Constant.HASHTABLE);
+		File hashtable = new File(Constant.HASHTABLE1);
 		OutputStream writer = new FileOutputStream(hashtable);
 		GenerateHashtable generater = new GenerateHashtable();
 		

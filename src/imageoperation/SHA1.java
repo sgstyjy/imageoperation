@@ -7,7 +7,7 @@ public class SHA1{
 	     //byte[] buffer = message.getBytes();
 	     //int numRead = message.length();
 	     try {
-	    	 	MessageDigest sha1 = MessageDigest.getInstance("SHA-1");
+	    	 	MessageDigest sha1 = MessageDigest.getInstance("SHA1");
 		        //System.out.println(sha1.getDigestLength());
 		        sha1.update(message);
 			    return sha1.digest();

@@ -11,10 +11,10 @@ import java.nio.channels.FileChannel;
 public class RandomChannel {
 	//随机通道读，以字节为单位
 	public void readFile() throws IOException{
-		RandomAccessFile randomAccessFile = new RandomAccessFile(Constant.PATH_IN_ISO,"r");
+		RandomAccessFile randomAccessFile = new RandomAccessFile(Constant.PATH_IN_ISO1,"r");
 		FileChannel reader = randomAccessFile.getChannel();
 		//FileChannel writer = new RandomAccessFile(Constant.PATH_OUT_ISO,"rw").getChannel();
-		File hashtable = new File(Constant.HASHTABLE);
+		File hashtable = new File(Constant.HASHTABLE1);
 		OutputStream writer = new FileOutputStream(hashtable);
 		GenerateHashtable generater = new GenerateHashtable();
 		
@@ -34,7 +34,7 @@ public class RandomChannel {
 		    	reader.read(lastbf,position);
 		    	byte[] dst = new byte[lastlenght];
 		    	lastbf.get(dst);
-		    	generater.generateHashtable(writer, dst);
+		    	generater.generateHashtable(dst);
 				//lastbf.flip();
 				//writer.write(lastbf);
 				lastbf.clear();
@@ -44,7 +44,7 @@ public class RandomChannel {
 		    reader.read(bb, position);
 		    byte[] dst = new byte[Constant.BUFFER_SIZE];
 		    bb.get(dst);
-		    generater.generateHashtable(writer, dst);
+		    generater.generateHashtable(dst);
 		    //bb.flip();
 		    //writer.write(bb);
 		    bb.clear();
