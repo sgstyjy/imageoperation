@@ -1,4 +1,7 @@
-package imageoperation;
+package backupclass;
+
+import imageoperation.Constant;
+import imageoperation.GenerateHashtable;
 
 import java.io.File;
 import java.io.FileInputStream;
