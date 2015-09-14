@@ -1,0 +1,1 @@
+raw——>qcow2： qemu-img convert -f raw centos.img -o qcow2 centos.qcow2
