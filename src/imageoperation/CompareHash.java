@@ -25,6 +25,7 @@ public class CompareHash {
 		//int col1 = sheet1.getColumns();
 		int total1 = 524287;    //hashtest1.qcow2  , 4k
 		//int total = 146432;    //ubuntu2
+		//int total = 252672     //ubuntu1
 		//System.out.println("The last line has rows: "+col1);
 		//System.out.println("Table1 has total cells: "+total1);
 		
@@ -34,9 +35,9 @@ public class CompareHash {
 		Sheet sheet2 = book2.getSheet(0);
 		//int col2 = sheet2.getColumns();  //column ÐÐÊý£¬ row ÁÐ
 		//System.out.println("The last line has rows: "+col2);
-		//int total2 = 146432;     //ubuntu2
+		int total2 = 146432;     //ubuntu2
 		//int total2 = 252672;   //ubuntu1,3
-		int total2 = 524287;  //hashtest2.qcow2, 4k
+		//int total2 = 524287;  //hashtest2.qcow2, 4k
 		//System.out.println("Table1 has total cells: "+total2);
 		
 		File compareresult = new File(Constant.COMPHASHTABLE_4);

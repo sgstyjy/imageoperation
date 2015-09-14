@@ -10,14 +10,14 @@ public class Constant {
 	//public static String PATH_OUT_MKV = "result.mkv";
 	//public static String PATH_OUT_ISO = "result.iso";
 	//public static String PAHT_OUT_TXT = "result.txt";
-	public static String PATH_IN_ISO1 = "ubuntu1.iso";
-	public static String PATH_IN_ISO2 = "ubuntu2.iso";
+	public static String PATH_IN_ISO1 = "ubuntu1.iso";      //4k, blocknum: 252672
+	public static String PATH_IN_ISO2 = "ubuntu2.iso";      //4k, blocknum: 146432
 	
 	public static String PATH_IN_QCOW21= "hashtest1.qcow2";
 	public static String PATH_IN_QCOW22 = "hashtest2.qcow2";
 	
-	public static String HASHTABLE1 = "ubuntu1_hashtable.xls";
-	public static String HASHTABLE2 = "ubuntu2_hashtable.xls";
+	public static String HASHTABLEu1 = "ubuntu1_hashtable.xls";
+	public static String HASHTABLEu2 = "ubuntu2_hashtable.xls";
 	
 	public static String HASHTABLE11 = "qcow1_hashtable_1k.xls";
 	public static String HASHTABLE12 = "qcow2_hashtable_1k.xls";

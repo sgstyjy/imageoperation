@@ -23,12 +23,12 @@ public class StreamRead {
 
 	//输入流读，以字节为单位
 	public void readFile () throws IOException, JxlWriteException, JXLException{
-		File file_in = new File(Constant.PATH_IN_QCOW21);
+		File file_in = new File(Constant.PATH_IN_ISO2);
 		InputStream reader = new FileInputStream(file_in);
 		//System.out.println("读文件结束;");
 		//File file_out = new File(Constant.PATH_OUT_ISO);
 		
-		File file_out = new File(Constant.HASHTABLE11);
+		File file_out = new File(Constant.HASHTABLEu2);
 		OutputStream writer = new FileOutputStream(file_out);
 		//创建工作薄
 		WritableWorkbook workbook = Workbook.createWorkbook(writer);
