@@ -23,20 +23,20 @@ public class ReadImage {
 		//读取开始时间
 		Date date = new Date();
 		Long starttime = date.getTime();
-		System.out.println(starttime);
+		//System.out.println("The start time is: "+starttime);
 		
 		//读镜像
-		reader.readFile();
+		//reader.readFile();
 		
 		//比较相似度
-		//CompareHash comHash = new CompareHash();
-		//comHash.compareHashtable();
+		CompareHash comHash = new CompareHash();
+		comHash.compareHashtable();
 		
 		//读取结束时间
 		Date date1 = new Date();
 		Long endtime = date1.getTime();
-		System.out.println(endtime);
+		//System.out.println("The end time is: "+endtime);
 		Long duration = endtime-starttime;
-		System.out.println(duration);
+		System.out.println("The compuate time is:"+duration);
 	}
 }
