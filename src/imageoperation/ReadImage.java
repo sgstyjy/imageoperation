@@ -39,7 +39,4 @@ public class ReadImage {
 		Long duration = endtime-starttime;
 		System.out.println(duration);
 	}
-
-
-
 }

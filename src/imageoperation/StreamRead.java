@@ -23,11 +23,12 @@ public class StreamRead {
 
 	//输入流读，以字节为单位
 	public void readFile () throws IOException, JxlWriteException, JXLException{
-		File file_in = new File(Constant.PATH_IN_ISO1);
+		File file_in = new File(Constant.PATH_IN_QCOW22);
 		InputStream reader = new FileInputStream(file_in);
+		System.out.println("读文件结束;");
 		//File file_out = new File(Constant.PATH_OUT_ISO);
 		
-		File file_out = new File(Constant.HASHTABLE1);
+		File file_out = new File(Constant.HASHTABLE4);
 		OutputStream writer = new FileOutputStream(file_out);
 		//创建工作薄
 		WritableWorkbook workbook = Workbook.createWorkbook(writer);
@@ -35,7 +36,7 @@ public class StreamRead {
 		WritableSheet sheet = workbook.createSheet("Hashtable",0);
 
 		//产生数据摘要
-		GenerateHashtable generater = new GenerateHashtable();
+		//GenerateHashtable generater = new GenerateHashtable();
 		SHA1 sha1 = new SHA1();
 		
 		int blocknum = 0;
@@ -56,7 +57,7 @@ public class StreamRead {
 		    	reader.read(lastbf);
 		    	absresult = sha1.generateAbstract(lastbf);
 		    	//abs = generater.generateHashtable(lastbf);
-		    	temp = new Label(blocknum/1000,blocknum%1000,absresult);
+		    	temp = new Label(blocknum/Constant.COLUMNS,blocknum%Constant.COLUMNS,absresult);
 		    	sheet.addCell(temp);
 				//writer.write(lastbf);
 				break;
@@ -65,7 +66,7 @@ public class StreamRead {
 		    reader.read(bb);
 		    absresult = sha1.generateAbstract(bb);
 		    //abs = generater.generateHashtable(bb);
-		    temp = new Label(blocknum/1000,blocknum%1000,absresult);
+		    temp = new Label(blocknum/Constant.COLUMNS,blocknum%Constant.COLUMNS,absresult);
 		    sheet.addCell(temp);
 		    position += Constant.BUFFER_SIZE;
 		    blocknum++;

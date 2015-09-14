@@ -28,7 +28,7 @@ public class CompareHash {
 		System.out.println("The last line has rows: "+col1);
 		//System.out.println("Table1 has total cells: "+total1);
 		
-		File file_in2 = new File(Constant.HASHTABLE4);
+		File file_in2 = new File(Constant.HASHTABLE3);
 		InputStream hashtable2 = new FileInputStream(file_in2);
 		Workbook book2 = Workbook.getWorkbook(hashtable2);
 		Sheet sheet2 = book2.getSheet(0);
