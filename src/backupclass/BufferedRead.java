@@ -1,4 +1,4 @@
-package imageoperation;
+package backupclass;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class BufferedRead {
-	//ÒÔ×Ö·ûÎªµ¥Î»¶ÁÈ¡£¬¶Á¾µÏñÊ±»á³ö´í
+	//ï¿½ï¿½ï¿½Ö·ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void readFile() throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader(Constant.PATH_IN_ISO1));
 		//PrintWriter pw = new PrintWriter(Constant.PATH_OUT_ISO);

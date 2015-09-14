@@ -1,4 +1,4 @@
-package imageoperation;
+package backupclass;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -7,7 +7,7 @@ import java.io.OutputStream;
 import java.io.RandomAccessFile;
 
 public class RandomRead {
-	//Ëæ»ú¶Á£¬ÒÔ×Ö½ÚÎªµ¥Î»
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½Îªï¿½ï¿½Î»
 	public void readFile() throws IOException{
 		RandomAccessFile reader = new RandomAccessFile(Constant.PATH_IN_ISO1,"r");
 		//RandomAccessFile writer = new RandomAccessFile(Constant.PATH_OUT_ISO,"rw");
@@ -20,7 +20,7 @@ public class RandomRead {
 		Long size = reader.length();
 		System.out.println(size);
 		while(position<size){
-		    //ÅÐ¶ÏÊÇ·ñÎª×îºóÒ»¿é
+		    //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 		    if((size-position)<Constant.BUFFER_SIZE)
 		    {
 		    	int lastlenght = (int)(size-position);
@@ -36,8 +36,8 @@ public class RandomRead {
 		    	//System.out.println(i);
 				break;
 		    }
-		    //²»ÊÇ×îºóÒ»¿é¾Í°´Ö¸¶¨¿é´óÐ¡¶ÁÈ¡
-		    //System.out.println("°´¿é¶ÁÈ¡");
+		    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Í°ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½È¡
+		    //System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½È¡");
 		    reader.read(bb);
 		    generater.generateHashtable(writer, bb);
 	    	//writer.write(bb);

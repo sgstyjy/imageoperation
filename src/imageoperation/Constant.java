@@ -12,6 +12,7 @@ public class Constant {
 	public static String PATH_IN_ISO1 = "ubuntu1.iso";
 	public static String PATH_IN_ISO2 = "ubuntu2.iso";
 	public static String PATH_IN_ISO3 = "ubuntu3.iso";
+	public static String PATH_IN_QCOW2 = "hashtest1.qcow2";
 	public static String HASHTABLE1 = "hashtable1.xls";
 	public static String HASHTABLE2 = "hashtable2.xls";
 	public static String HASHTABLE3 = "hashtable3.xls";

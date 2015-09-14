@@ -23,11 +23,11 @@ public class StreamRead {
 
 	//输入流读，以字节为单位
 	public void readFile () throws IOException, JxlWriteException, JXLException{
-		File file_in = new File(Constant.PATH_IN_PDF);
+		File file_in = new File(Constant.PATH_IN_ISO1);
 		InputStream reader = new FileInputStream(file_in);
 		//File file_out = new File(Constant.PATH_OUT_ISO);
 		
-		File file_out = new File(Constant.HASHTABLE4);
+		File file_out = new File(Constant.HASHTABLE1);
 		OutputStream writer = new FileOutputStream(file_out);
 		//创建工作薄
 		WritableWorkbook workbook = Workbook.createWorkbook(writer);
@@ -35,14 +35,16 @@ public class StreamRead {
 		WritableSheet sheet = workbook.createSheet("Hashtable",0);
 
 		//产生数据摘要
-		GenerateHashtable generater = new GenerateHashtable();	
+		GenerateHashtable generater = new GenerateHashtable();
+		SHA1 sha1 = new SHA1();
 		
 		int blocknum = 0;
 		int position = 0;
 		int size = reader.available();
 		//System.out.println(size);
 		byte[] bb = new byte[Constant.BUFFER_SIZE];
-		byte[] abs = new byte[20];
+		//byte[] abs = new byte[20];
+		String absresult = null;
 		while(position<size){
 		    //判断是否为最后一块
 		    if((size-position)<Constant.BUFFER_SIZE)
@@ -52,16 +54,18 @@ public class StreamRead {
 		    	byte[] lastbf = new byte[(size-position)];
 		    	//System.out.println("The last buffer is: "+ lastbf.capacity());
 		    	reader.read(lastbf);
-		    	abs = generater.generateHashtable(lastbf);
-		    	temp = new Label(blocknum/1000,blocknum%1000,abs.toString());
+		    	absresult = sha1.generateAbstract(lastbf);
+		    	//abs = generater.generateHashtable(lastbf);
+		    	temp = new Label(blocknum/1000,blocknum%1000,absresult);
 		    	sheet.addCell(temp);
 				//writer.write(lastbf);
 				break;
 		    }
 		    //不是最后一块就按指定块大小读取
 		    reader.read(bb);
-		    abs = generater.generateHashtable(bb);
-		    temp = new Label(blocknum/1000,blocknum%1000,abs.toString());
+		    absresult = sha1.generateAbstract(bb);
+		    //abs = generater.generateHashtable(bb);
+		    temp = new Label(blocknum/1000,blocknum%1000,absresult);
 		    sheet.addCell(temp);
 		    position += Constant.BUFFER_SIZE;
 		    blocknum++;

@@ -4,4 +4,6 @@
 *.rmvb
 *.mkv
 *.iso
+*.qcow2
+*.img
 /bin/

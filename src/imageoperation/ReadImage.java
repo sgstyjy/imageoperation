@@ -26,11 +26,11 @@ public class ReadImage {
 		System.out.println(starttime);
 		
 		//读镜像
-		//reader.readFile();
+		reader.readFile();
 		
 		//比较相似度
-		CompareHash comHash = new CompareHash();
-		comHash.compareHashtable();
+		//CompareHash comHash = new CompareHash();
+		//comHash.compareHashtable();
 		
 		//读取结束时间
 		Date date1 = new Date();
