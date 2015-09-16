@@ -25,13 +25,13 @@ public class ReadImage {
 		//System.out.println("The start time is: "+starttime);
 		
 		//读镜像
-		StreamRead reader = new StreamRead();  //输入流读，以字节为单位，读Ubuntu时间801，计算哈希时间6593
+		//StreamRead reader = new StreamRead();  //输入流读，以字节为单位，读Ubuntu时间801，计算哈希时间6593
 		//StreamReadTxt reader = new StreamReadTxt();
-		reader.readFile();
+		//reader.readFile();
 		
 		//比较相似度
-		//CompareHash comHash = new CompareHash();
-		//comHash.compareHashtable();
+		CompareHash comHash = new CompareHash();
+		comHash.compareHashtable();
 		
 		//比较相似度
 		//CompareHashtxt comHash = new CompareHashtxt();
