@@ -6,10 +6,7 @@ public class SHA1 {
 
 	// public static void main(String[] args) throws Exception {
 	    public String generateAbstract(byte [] message) {
-		// TODO Auto-generated method stub
-		//String s = "sdvsfasdbg";
-		//byte[] abs = message.getBytes();
-		//System.out.println(abs.length);
+
 		byte[] temp = null;
 		try{
 					MessageDigest sha1 = MessageDigest.getInstance("SHA-1");
@@ -28,7 +25,7 @@ public class SHA1 {
 		      //System.out.println(b.length);
 		      for (int j=0; j<b.length; j++) {
 		         buf.append(hexDigit[(b[j] >> 4) & 0x0f]);
-		         buf.append(hexDigit[b[j] & 0x0f]);
+		         //buf.append(hexDigit[b[j] & 0x0f]);
 		      }
 		      return buf.toString();
 		   }

@@ -5,10 +5,10 @@ import java.security.NoSuchAlgorithmException;
 
 public class SHA_test {
 
-	// public static void main(String[] args) throws Exception {
-	    public String SHA1_test(String message) {
+	 public static String main(String[] args) throws Exception {
+	    //public String SHA1_test(String message) {
 		// TODO Auto-generated method stub
-		String s = "sdvsfasdbg";
+		String message = "sdvsfasdbg";
 		byte[] abs = message.getBytes();
 		System.out.println(abs.length);
 		byte[] temp = null;
@@ -20,7 +20,7 @@ public class SHA_test {
 		}catch(Exception e){
 			System.out.println("Exception: "+e);
 		}
-		return bytesToHex(temp);
+		return bytesToHex(temp); 
 	}
 	   public static String bytesToHex(byte[] b) {
 		      char hexDigit[] = {'0', '1', '2', '3', '4', '5', '6', '7',

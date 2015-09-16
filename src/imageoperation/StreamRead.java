@@ -23,12 +23,14 @@ public class StreamRead {
 
 	//输入流读，以字节为单位
 	public void readFile () throws IOException, JxlWriteException, JXLException{
-		File file_in = new File(Constant.PATH_IN_ISO2);
+		File file_in = new File(Constant.UBUNTU14WEBSERVER);
 		InputStream reader = new FileInputStream(file_in);
-		//System.out.println("读文件结束;");
+		System.out.println("输入文件是："+file_in.getName());
 		//File file_out = new File(Constant.PATH_OUT_ISO);
 		
-		File file_out = new File(Constant.HASHTABLEu2);
+		File file_out = new File(Constant.U14WEB_12K);
+		System.out.println("输出文件是："+file_out.getName());
+		System.out.println("块大小是："+Constant.BUFFER_SIZE/1024+"K");
 		OutputStream writer = new FileOutputStream(file_out);
 		//创建工作薄
 		WritableWorkbook workbook = Workbook.createWorkbook(writer);
@@ -56,16 +58,13 @@ public class StreamRead {
 		    	//System.out.println("The last buffer is: "+ lastbf.capacity());
 		    	reader.read(lastbf);
 		    	absresult = sha1.generateAbstract(lastbf);
-		    	//abs = generater.generateHashtable(lastbf);
 		    	temp = new Label(blocknum/Constant.COLUMNS,blocknum%Constant.COLUMNS,absresult);
 		    	sheet.addCell(temp);
-				//writer.write(lastbf);
 				break;
 		    }
 		    //不是最后一块就按指定块大小读取
 		    reader.read(bb);
 		    absresult = sha1.generateAbstract(bb);
-		    //abs = generater.generateHashtable(bb);
 		    temp = new Label(blocknum/Constant.COLUMNS,blocknum%Constant.COLUMNS,absresult);
 		    sheet.addCell(temp);
 		    position += Constant.BUFFER_SIZE;

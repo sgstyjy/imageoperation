@@ -18,19 +18,24 @@ public class ReadImage {
 		//MappedRead reader = new MappedRead(); //映射内存，读Ubuntu时间5866，计算哈希时间18383
 		//RandomRead reader = new RandomRead(); //随机读，以字节为单位，读Ubuntu时间11478，计算哈希时间6629
 		//RandomChannel reader = new RandomChannel(); //随机通道读，以字节为单位，读Ubuntu时间1471
-		StreamRead reader = new StreamRead();  //输入流读，以字节为单位，读Ubuntu时间801，计算哈希时间6593
-		
+
 		//读取开始时间
 		Date date = new Date();
 		Long starttime = date.getTime();
 		//System.out.println("The start time is: "+starttime);
 		
 		//读镜像
-		//reader.readFile();
+		StreamRead reader = new StreamRead();  //输入流读，以字节为单位，读Ubuntu时间801，计算哈希时间6593
+		//StreamReadTxt reader = new StreamReadTxt();
+		reader.readFile();
 		
 		//比较相似度
-		CompareHash comHash = new CompareHash();
-		comHash.compareHashtable();
+		//CompareHash comHash = new CompareHash();
+		//comHash.compareHashtable();
+		
+		//比较相似度
+		//CompareHashtxt comHash = new CompareHashtxt();
+		//comHash.compareHashtable();
 		
 		//读取结束时间
 		Date date1 = new Date();
