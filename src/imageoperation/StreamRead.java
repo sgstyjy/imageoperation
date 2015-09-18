@@ -23,12 +23,12 @@ public class StreamRead {
 
 	//输入流读，以字节为单位
 	public void readFile () throws IOException, JxlWriteException, JXLException{
-		File file_in = new File(Constant.UBUNTU14WEBSERVER);
+		File file_in = new File(Constant.UBUNTU12SERVER);
 		InputStream reader = new FileInputStream(file_in);
 		System.out.println("输入文件是："+file_in.getName());
 		//File file_out = new File(Constant.PATH_OUT_ISO);
 		
-		File file_out = new File(Constant.U14WEB_12K);
+		File file_out = new File(Constant.U12_12K);
 		System.out.println("输出文件是："+file_out.getName());
 		System.out.println("块大小是："+Constant.BUFFER_SIZE/1024+"K");
 		OutputStream writer = new FileOutputStream(file_out);

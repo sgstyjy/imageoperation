@@ -20,7 +20,7 @@ import jxl.read.biff.BiffException;
 public class CompareHash {
 	
 	public void compareHashtable() throws IOException, JXLException{ 
-		File file_in1 = new File(Constant.U14_4K);
+		File file_in1 = new File(Constant.U12_4K);
 		//InputStream hashtable1 = new FileInputStream(file_in1);
 		//BufferedReader hashtable1 = new BufferedReader(new FileReader(Constant.U1_4K));
 		Workbook book1 = Workbook.getWorkbook(file_in1);
@@ -29,11 +29,15 @@ public class CompareHash {
 		//int total1 = 524287;    //hashtest1.qcow2  , 4k
 		//int total1 = 146432;    //ubuntu2
 		//int total1 = 252672;     //ubuntu1
-		//int total1 = 382528;    //ubuntu12server.qcow2, 4k
-		int total1 = 426320;   //ubuntu14server.qcow2, 4k 
-		//int total1 = 95632;     //ubuntu12server.qcow2, 16k   
-		//int total1 = 142106;   //ubuntu14server.qcow2, 12k
+		int total1 = 382528;    //ubuntu12server.qcow2, 4k
+		//int total1 = 191264;     //ubuntu12server.qcow2, 8k  
+		//int total1 = 127509;     //ubuntu12server.qcow2, 12k 
+		//int total1 = 95632;     //ubuntu12server.qcow2, 16k  
+				
+		//int total1 = 426320;   //ubuntu14server.qcow2, 4k 
 		//int total1 = 213160;   //ubuntu14server.qcow2, 8k
+		 //int total1 = 142106;   //ubuntu14server.qcow2, 12k
+		//int total2 = 106580;   //ubuntu14server.qcow2, 16k
 		
 		File file_in2 = new File(Constant.U14WEB_4K);
 		//InputStream hashtable2 = new FileInputStream(file_in2);
@@ -42,12 +46,11 @@ public class CompareHash {
 		//int total2 = 146432;     //ubuntu2
 		//int total2 = 252672;   //ubuntu1,3
 		//int total2 = 524287;  //hashtest2.qcow2, 4k
-		//int total2 = 106580;   //ubuntu14server.qcow2, 16k
-		//int total2 = 426320;  //ubuntu14server.qcow2, 4k
-	    //int total2 = 117104; //ubuntu14webserver.qcow2, 16k
-	   // int total2 = 156138;   //ubuntu14webserver.qcow2, 12k
-	   // int total2 = 234208 ;   //ubuntu14webserver.qcow2, 8k
-	    int total2 = 468416 ;   //ubuntu14webserver.qcow2, 4k
+		
+	  int total2 = 468416 ;   //ubuntu14webserver.qcow2, 4k
+	     //int total2 = 234208 ;   //ubuntu14webserver.qcow2, 8k
+	   //int total2 = 156138;   //ubuntu14webserver.qcow2, 12k
+	   // int total2 = 117104; //ubuntu14webserver.qcow2, 16k
 		
 		//File compareresult = new File(Constant.COM_Q1_Q2_16K);
 		//OutputStream file_out = new FileOutputStream(compareresult);		
@@ -95,7 +98,7 @@ public class CompareHash {
 		}
 		//workbook.write();
 		//workbook.close();
-		double similar_ratio = (double)similar/total1;
+		double similar_ratio = (double)similar/total2;
 		System.out.println("The first input file is:  "+file_in1.getName());
 		System.out.println("The second input file is:  "+file_in2.getName());
 		System.out.println("The similar blocks are : "+similar);
