@@ -15,6 +15,7 @@ public class FastCompareHash {
 	public void fastCompareHash(String path1 , int total1, String path2,  int total2) throws BiffException, IOException{
 		   //read the first file, and then the two hashtables
 		    File file_in1 = new File(path1);
+		    System.out.println("输入文件1是："+file_in1.getName());
 			Workbook book1 = Workbook.getWorkbook(file_in1);
 			Sheet sheet1bkdr = book1.getSheet(0);
 			Sheet sheet1ap = book1.getSheet(1);
@@ -26,6 +27,7 @@ public class FastCompareHash {
 			ap1 = generateArray(sheet1ap, Constant.nodenumlistap, total1);
 			
 			File file_in2 = new File(path2);
+			System.out.println("输入文件2是："+file_in2.getName());
 			Workbook book2 = Workbook.getWorkbook(file_in2);
 			Sheet sheet2bkdr = book2.getSheet(0);
 			Sheet sheet2ap = book2.getSheet(1);
@@ -35,7 +37,7 @@ public class FastCompareHash {
 			long templ1,templ2 = 0;
 			while(i< total2){
 				       //read data from the second file
-				       System.out.println(i);
+				       //System.out.println(i);
 						temps1 = sheet2bkdr.getCell(i/Constant.COLUMNS, i%Constant.COLUMNS).getContents();
 						temps2 = sheet2ap.getCell(i/Constant.COLUMNS, i%Constant.COLUMNS).getContents();
 						templ1 = Long.parseLong(temps1);
@@ -51,7 +53,9 @@ public class FastCompareHash {
 							i++;      
 						}
 			}
-			double similarity = (double) Constant.similar / total2; 	
+			System.out.println("The original block amount is: "+total2);
+			System.out.println("The compare block amount is: "+i);
+			double similarity = (double) Constant.similar / total2; 
 			System.out.println("相似块数："+Constant.similar);
 			System.out.println("相似度："+similarity);
 			return;

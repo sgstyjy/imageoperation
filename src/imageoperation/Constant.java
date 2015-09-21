@@ -1,7 +1,7 @@
 package imageoperation;
 
 public class Constant {
-	public static int BUFFER_SIZE = 4*1024;
+	public static int BUFFER_SIZE = 20*1024;
 	public static int COLUMNS = 10000;
 	public static int PRIME = 10007;
 	public static int[]  nodenumlistbkdr = new int[Constant.PRIME];
@@ -10,21 +10,53 @@ public class Constant {
 	public static int similar = 0;
 	
 	public static int U12_4K_TNUM =382528;
-	public static int U14_4K_TNUM =426320;
-	public static int U14WEB_4K_TNUM =468416;
+	public static int U14WEB_4K_TNUM =524287;
+	public static int U14DEV_4K_TNUM =524287;
 	
-	public static int U12_8K_TNUM =382528;
-	public static int U14_8K_TNUM =382528;
-	public static int U14WEB_8K_TNUM =382528;
+	public static int U12_8K_TNUM =191264;
+	public static int U14WEB_8K_TNUM =262143;
+	public static int U14DEV_8K_TNUM =262143;
 	
-	public static int U12_12K_TNUM =382528;
-	public static int U14_12K_TNUM =382528;
-	public static int U14WEB_12K_TNUM =382528;
+	public static int U12_12K_TNUM =127509;
+	public static int U14WEB_12K_TNUM =174762;
+	public static int U14DEV_12K_TNUM =174762;
 	
-	public static int U12_16K_TNUM =382528;
-	public static int U14_16K_TNUM =382528;
-	public static int U14WEB_16K_TNUM =382528;
+	public static int U12_16K_TNUM =95632;
+	public static int U14WEB_16K_TNUM =131071;
+	public static int U14DEV_16K_TNUM =131071;
 	
+	public static int U12_20K_TNUM =76505;
+	public static int U14WEB_20K_TNUM =104857;
+	public static int U14DEV_20K_TNUM =104857;
+	
+
+	//hashtest.qcow2输入
+	public static String UBUNTU12SERVER= "ubuntu12server.qcow2";   
+	public static String UBUNTU14WEBSERVER = "ubuntun14server.qcow2";
+	public static String UBUNTU14DEVELOP= "ubuntun14develop.qcow2";
+	
+	
+	//BKDR和AP哈希输出结果
+	public static String U12_4K = "ubuntu12_4k.xls";       //blocknum:382528 , compute time: 12711
+	public static String U14WEB_4K = "ubuntu14webserver_4k.xls";       //blocknum:524287 , compute time: 19763
+	public static String U14DEV_4K = "ubuntu14develop_4k.xls";    //blocknum:524287, compute time: 18190
+	
+	public static String U12_8K = "ubuntu12_8k.xls";       //blocknum: 191264 , compute time: 11183
+	public static String U14WEB_8K = "ubuntu14webserver_8k.xls";       //blocknum:262143 , compute time:  16517
+	public static String U14DEV_8K = "ubuntu14develop_8k.xls";    //blocknum: 262143, compute time: 16110
+	
+	public static String U12_12K = "ubuntu12_12k.xls";       //blocknum: 127509, compute time: 11203
+	public static String U14WEB_12K = "ubuntu14webserver_12k.xls";       //blocknum:174762 , compute time: 16008
+	public static String U14DEV_12K = "ubuntu14develop_12k.xls";    //blocknum: 174762, compute time: 15622
+	
+	public static String U12_16K = "ubuntu12_16k.xls";       //blocknum: 95632, compute time:  10968
+	public static String U14WEB_16K = "ubuntu14webserver_16k.xls";       //blocknum: 131071, compute time: 15937
+	public static String U14DEV_16K = "ubuntu14develop_16k.xls";    //blocknum: 131071, compute time: 15287
+	
+	public static String U12_20K = "ubuntu12_20k.xls";       //blocknum: 76505, compute time:  10914
+	public static String U14WEB_20K = "ubuntu14webserver_20k.xls";       //blocknum: 104857, compute time: 15402
+	public static String U14DEV_20K = "ubuntu14develop_20k.xls";    //blocknum: 104857, compute time: 15322
+
 	//public static String PATH_IN_PDF = "test.pdf";
 	//public static String PATH_IN_MKV = "test.mkv";
 	//public static String PATH_IN_TXT = "test.txt";
@@ -42,29 +74,7 @@ public class Constant {
 	public static String U2_4K= "ubuntu2_4k.xls";       //blocknum:146432, compute time: 5472
 	public static String U1_C_4K= "ubuntu1_c_4k.xls";   //blocknum:252672, compute time: 9274
 	*/
-	//hashtest.qcow2输入
-	public static String UBUNTU12SERVER= "ubuntu12server.qcow2";   
-	public static String UBUNTU14WEBSERVER = "ubuntun14server.qcow2";
-	public static String UBUNTU14DEVELOP= "ubuntun14develop.qcow2";
 	
-	
-	//BKDR哈希输出结果
-	public static String U12_4K = "ubuntu12_4k.xls";       //blocknum:382528 , compute time: 12904
-	public static String U14WEB_4K = "ubuntu14webserver_4k.xls";       //blocknum:426320 , compute time: 14891
-	public static String U14DEV_4K = "ubuntu14develop_4k.xls";    //blocknum:468416, compute time: 16353
-	
-	public static String U12_8K = "ubuntu12_8k.xls";       //blocknum:  , compute time: 
-	public static String U14WEB_8K = "ubuntu14webserver_8k.xls";       //blocknum: , compute time:  
-	public static String U14DEV_8K = "ubuntu14develop_8k.xls";    //blocknum: , compute time: 
-	
-	public static String U12_12K = "ubuntu12_12k.xls";       //blocknum: , compute time: 
-	public static String U14WEB_12K = "ubuntu14webserver_12k.xls";       //blocknum: , compute time: 
-	public static String U14DEV_12K = "ubuntu14develop_12k.xls";    //blocknum: , compute time: 
-	
-	public static String U12_16K = "ubuntu12_16k.xls";       //blocknum: , compute time:  
-	public static String U14WEB_16K = "ubuntu14webserver_16k.xls";       //blocknum: , compute time: 
-	public static String U14DEV_16K = "ubuntu14develop_16k.xls";    //blocknum: , compute time: 
-
 	/*
 	//SHA1哈希输出结果
 	public static String U12_4K = "ubuntu12server_4k.xls";       //blocknum: 382528, compute time: 14166
