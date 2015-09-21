@@ -44,26 +44,26 @@ public class Constant {
 	*/
 	//hashtest.qcow2输入
 	public static String UBUNTU12SERVER= "ubuntu12server.qcow2";   
-	public static String UBUNTU14SERVER = "ubuntu14server.qcow2";
-	public static String UBUNTU14WEBSERVER= "ubuntu14webserver.qcow2";
+	public static String UBUNTU14WEBSERVER = "ubuntun14server.qcow2";
+	public static String UBUNTU14DEVELOP= "ubuntun14develop.qcow2";
 	
 	
 	//BKDR哈希输出结果
 	public static String U12_4K = "ubuntu12_4k.xls";       //blocknum:382528 , compute time: 12904
-	public static String U14_4K = "ubuntu14_4k.xls";       //blocknum:426320 , compute time: 14891
-	public static String U14WEB_4K = "ubuntu14web_4k.xls";    //blocknum:468416, compute time: 16353
+	public static String U14WEB_4K = "ubuntu14webserver_4k.xls";       //blocknum:426320 , compute time: 14891
+	public static String U14DEV_4K = "ubuntu14develop_4k.xls";    //blocknum:468416, compute time: 16353
 	
 	public static String U12_8K = "ubuntu12_8k.xls";       //blocknum:  , compute time: 
-	public static String U14_8K = "ubuntu14_8k.xls";       //blocknum: , compute time:  
-	public static String U14WEB_8K = "ubuntu14web_8k.xls";    //blocknum: , compute time: 
+	public static String U14WEB_8K = "ubuntu14webserver_8k.xls";       //blocknum: , compute time:  
+	public static String U14DEV_8K = "ubuntu14develop_8k.xls";    //blocknum: , compute time: 
 	
 	public static String U12_12K = "ubuntu12_12k.xls";       //blocknum: , compute time: 
-	public static String U14_12K = "ubuntu14_12k.xls";       //blocknum: , compute time: 
-	public static String U14WEB_12K = "ubuntu14web_12k.xls";    //blocknum: , compute time: 
+	public static String U14WEB_12K = "ubuntu14webserver_12k.xls";       //blocknum: , compute time: 
+	public static String U14DEV_12K = "ubuntu14develop_12k.xls";    //blocknum: , compute time: 
 	
 	public static String U12_16K = "ubuntu12_16k.xls";       //blocknum: , compute time:  
-	public static String U14_16K = "ubuntu14_16k.xls";       //blocknum: , compute time: 
-	public static String U14WEB_16K = "ubuntu14web_16k.xls";    //blocknum: , compute time: 
+	public static String U14WEB_16K = "ubuntu14webserver_16k.xls";       //blocknum: , compute time: 
+	public static String U14DEV_16K = "ubuntu14develop_16k.xls";    //blocknum: , compute time: 
 
 	/*
 	//SHA1哈希输出结果

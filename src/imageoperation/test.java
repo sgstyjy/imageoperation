@@ -27,8 +27,7 @@ public class test {
     	     
        //产生数组
       Node[] nodelist = new Node[Constant.PRIME];
-     Node tempnode = new Node();
-    while (i< Constant.U12_4K_TNUM){
+      while (i< Constant.U12_4K_TNUM){
     	              //获取摘要值
     	    	        String tempstr = sheet1bkdr.getCell(i/Constant.COLUMNS, i%Constant.COLUMNS).getContents();
     	    	        long abst = Long.parseLong(tempstr);
@@ -37,6 +36,7 @@ public class test {
     	    	        int position = (int) (Math.abs(abst)%Constant.PRIME);   
     	    	        
     	    	        //构造Node节点
+    	    	        Node tempnode = new Node();
     	    	        tempnode.setBlocknum(i);
     	    	        tempnode.setHashvalue(abst);
     	    	        tempnode.next = null;

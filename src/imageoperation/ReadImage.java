@@ -27,16 +27,16 @@ public class ReadImage {
 		//读镜像
 		//StreamRead reader = new StreamRead();  //输入流读，以字节为单位，读Ubuntu时间801，计算哈希时间6593
 		//StreamReadTxt reader = new StreamReadTxt();
-		//FastHash reader = new FastHash();
-	    //reader.readFile(Constant.UBUNTU14WEBSERVER,Constant.U14WEB_4K);
+		FastHash reader = new FastHash();
+	    reader.readFile(Constant.UBUNTU12SERVER,Constant.U12_4K);
 				
 		//比较相似度
 		//CompareHash comHash = new CompareHash();
 		//comHash.compareHashtable();
 		//CompareHashtxt comHash = new CompareHashtxt();
 		//comHash.compareHashtable();
-	    FastCompareHash comparer = new FastCompareHash();
-	    comparer.fastCompareHash(Constant.U12_4K, Constant.U12_4K_TNUM, Constant.U14WEB_4K, Constant.U14WEB_4K_TNUM);
+	    //FastCompareHash comparer = new FastCompareHash();
+	  //  comparer.fastCompareHash(Constant.U12_4K, Constant.U12_4K_TNUM, Constant.U14WEB_4K, Constant.U14WEB_4K_TNUM);
 		
 		//读取结束时间
 		Date date1 = new Date();
