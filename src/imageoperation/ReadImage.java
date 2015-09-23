@@ -13,32 +13,34 @@ public class ReadImage {
 
 	public static void main(String[] args) throws IOException, JxlWriteException, JXLException {
 		// TODO Auto-generated method stub
-		//¶Á¾µÏñ
-		//BufferedRead reader = new BufferedRead(); //ÒÔ×Ö·ûÎªµ¥Î»¶ÁÈ¡£¬¶Á¾µÏñÊ±»á³ö´í
-		//MappedRead reader = new MappedRead(); //Ó³ÉäÄÚ´æ£¬¶ÁUbuntuÊ±¼ä5866£¬¼ÆËã¹þÏ£Ê±¼ä18383
-		//RandomRead reader = new RandomRead(); //Ëæ»ú¶Á£¬ÒÔ×Ö½ÚÎªµ¥Î»£¬¶ÁUbuntuÊ±¼ä11478£¬¼ÆËã¹þÏ£Ê±¼ä6629
-		//RandomChannel reader = new RandomChannel(); //Ëæ»úÍ¨µÀ¶Á£¬ÒÔ×Ö½ÚÎªµ¥Î»£¬¶ÁUbuntuÊ±¼ä1471
+		//BufferedRead reader = new BufferedRead(); //ï¿½ï¿½ï¿½Ö·ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
+		//MappedRead reader = new MappedRead(); //Ó³ï¿½ï¿½ï¿½Ú´æ£¬ï¿½ï¿½UbuntuÊ±ï¿½ï¿½5866ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£Ê±ï¿½ï¿½18383
+		//RandomRead reader = new RandomRead(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½UbuntuÊ±ï¿½ï¿½11478ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£Ê±ï¿½ï¿½6629
+		//RandomChannel reader = new RandomChannel(); //ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½UbuntuÊ±ï¿½ï¿½1471
 
-		//¶ÁÈ¡¿ªÊ¼Ê±¼ä
+		//the start time
 		Date date = new Date();
 		Long starttime = date.getTime();
 		//System.out.println("The start time is: "+starttime);
 		
-		//¶Á¾µÏñ
-		//StreamRead reader = new StreamRead();  //ÊäÈëÁ÷¶Á£¬ÒÔ×Ö½ÚÎªµ¥Î»£¬¶ÁUbuntuÊ±¼ä801£¬¼ÆËã¹þÏ£Ê±¼ä6593
+		//generate the hashtables
+		//StreamRead reader = new StreamRead();  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½UbuntuÊ±ï¿½ï¿½801ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£Ê±ï¿½ï¿½6593
 		//StreamReadTxt reader = new StreamReadTxt();
 		//FastHash reader = new FastHash();
 	    //reader.readFile(Constant.UBUNTU14DEVELOP,Constant.U14DEV_20K);
 				
-		//±È½ÏÏàËÆ¶È
+		//generate the similarity table
 		//CompareHash comHash = new CompareHash();
 		//comHash.compareHashtable();
 		//CompareHashtxt comHash = new CompareHashtxt();
 		//comHash.compareHashtable();
-	    FastCompareHash comparer = new FastCompareHash();
-	  comparer.fastCompareHash(Constant.U14DEV_16K, Constant.U14DEV_16K_TNUM, Constant.U14WEB_16K, Constant.U14WEB_16K_TNUM);
+	    //FastCompareHash comparer = new FastCompareHash();
+	  //comparer.fastCompareHash(Constant.U14DEV_16K, Constant.U14DEV_16K_TNUM, Constant.U14WEB_16K, Constant.U14WEB_16K_TNUM);
 		
-		//¶ÁÈ¡½áÊøÊ±¼ä
+	   //result similarity
+	  ResultSimilar resimilar = new ResultSimilar();
+	  resimilar.compareResult(Constant.COM_U14DEV_U14WEB_4K,Constant.COM_U14_U14WEB_4K);
+		//the end time
 		Date date1 = new Date();
 		Long endtime = date1.getTime();
 		//System.out.println("The end time is: "+endtime);

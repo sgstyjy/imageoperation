@@ -1,4 +1,4 @@
-package imageoperation;
+package backupclass;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,9 +9,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+import imageoperation.Constant;
+import imageoperation.SHA1;
 import jxl.JXLException;
 import jxl.Workbook;
-import jxl.write.Label;    //²»ÄÜimport jxl.awt.Label
+import jxl.write.Label;    //ï¿½ï¿½ï¿½ï¿½import jxl.awt.Label
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
@@ -23,17 +25,17 @@ public class StreamReadTxt {
 	
 	private Label temp=null;
 
-	//ÊäÈëÁ÷¶Á£¬ÒÔ×Ö½ÚÎªµ¥Î»
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½Îªï¿½ï¿½Î»
 	public void readFile () throws IOException, JxlWriteException, JXLException{
 		File file_in = new File(Constant.QCOW2_2);
 		InputStream reader = new FileInputStream(file_in);
-		//System.out.println("¶ÁÎÄ¼þ½áÊø;");
+		//System.out.println("ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½;");
 		//File file_out = new File(Constant.PATH_OUT_ISO);
 		
 		File file_out = new File(Constant.Q2_4K_TXT);
 		PrintStream ps = new PrintStream(new FileOutputStream(file_out));
 		//OutputStream writer = new FileOutputStream(file_out);
-		//²úÉúÊý¾ÝÕªÒª
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÕªÒª
 		SHA1 sha1 = new SHA1();
 		
 		int blocknum = 0;
@@ -44,7 +46,7 @@ public class StreamReadTxt {
 		//byte[] abs = new byte[20];
 		String absresult = null;
 		while(position<size){
-		    //ÅÐ¶ÏÊÇ·ñÎª×îºóÒ»¿é
+		    //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 		    if((size-position)<Constant.BUFFER_SIZE)
 		    {
 		    	//System.out.println("This is the last block!");
@@ -56,7 +58,7 @@ public class StreamReadTxt {
 	           ps.append(absresult+"\n");
 				break;
 		    }
-		    //²»ÊÇ×îºóÒ»¿é¾Í°´Ö¸¶¨¿é´óÐ¡¶ÁÈ¡
+		    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Í°ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½È¡
 		    reader.read(bb);
 		    absresult = sha1.generateAbstract(bb);
 		    ps.append(absresult+"\n");

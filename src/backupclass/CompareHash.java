@@ -1,4 +1,4 @@
-package imageoperation;
+package backupclass;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import imageoperation.Constant;
 import jxl.JXLException;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -55,7 +56,7 @@ public class CompareHash {
 		//File compareresult = new File(Constant.COM_Q1_Q2_16K);
 		//OutputStream file_out = new FileOutputStream(compareresult);		
 		//WritableWorkbook workbook = Workbook.createWorkbook(file_out);
-		//´´½¨±íµ¥
+		//ï¿½ï¿½ï¿½ï¿½ï¿½?
 		//WritableSheet writer = workbook.createSheet("compare_hash_result",0);
 		//Label temp = null;
 		
@@ -64,7 +65,7 @@ public class CompareHash {
 		String temp1, temp2=null;
 		
 		/**
-		 //¶ÔÓ¦¿é±È½Ï
+		 //ï¿½ï¿½Ó¦ï¿½ï¿½È½ï¿½
 		while(i<total1 && i<total2){
 			temp1 = sheet1.getCell(i/Constant.COLUMNS,  i%Constant.COLUMNS).getContents();
 			temp2 = sheet2.getCell(i/Constant.COLUMNS,  i%Constant.COLUMNS).getContents();
@@ -77,7 +78,7 @@ public class CompareHash {
 		}
        */
 		
-		//È«ÎÄ±È½Ï£¬¼ÆËãÁ¿Ì«´ó
+		//È«ï¿½Ä±È½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì«ï¿½ï¿½
 		while (i<total1){
 			System.out.println(i);
 			int j=0;
